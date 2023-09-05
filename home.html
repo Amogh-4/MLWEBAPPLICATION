@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+<link rel="icon" type="images/x-icon" href="/static/icon.jpeg">
+<style>
+    body{
+        font-family: 'Ubuntu', sans-serif;
+        background: rgb(12,214,164);
+background: linear-gradient(90deg, rgba(12,214,164,1) 0%, rgba(89,83,174,1) 56%, rgba(89,83,174,1) 90%);
+    }
+    ::placeholder{
+        font-family: 'Ubuntu', sans-serif;
+        color: rgba(75, 16, 75, 0.852)
+    }
+    input[type=submit]{
+        font-family: 'Ubuntu', sans-serif;
+        background-color: #891ac5;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        border-radius: 50px;
+        margin: 2px 2px;
+        cursor: pointer;
+    }
+    p{
+        margin-top: 50px;;
+    }
+    b{
+        font-weight: 700;
+    }
+    img{
+        border-radius : 50%;
+    }
+</style>
+        <title>ML Web App</title>
+    </head>
+    <body bgcolor = #2596be>
+        <center>
+            <h1><b><p style="color: azure">IRIS FLOWER DETECTION</p></b></h1>
+            <form method = "POST" action="{{url_for('home')}}">
+                <b>Sepal Length (cm): <input type = "number", name = "a", step = "0.1", placeholder="Enter Sepal Length in cm"></b>
+            <br><br>
+            <b>Sepal Width (cm): <input type = "number", name = "b", step = "0.1", placeholder = "Enter Sepal Width in cm"> </b>
+            <br><br>
+            <b>Petal Length (cm): <input type = "number", name = "c", step = "0.1", placeholder="Enter Petal Length in cm"></b>
+            <br><br>
+            <b>Petal Width (cm): <input type = "number", name = "d", step = "0.1", placeholder = "Enter Petal Width in cm"></b>
+            <br><br>
+            <input type="submit", value = "PREDICT!">
+        </form>
+        <img src="/static/mainiris1.jpeg" alt="Flower">
+    </center>
+    </body>
+</html>

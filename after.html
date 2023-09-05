@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+<link rel="icon" type="images/x-icon" href="/static/icon.jpeg">
+<style>
+    body{
+        font-family: 'Ubuntu', sans-serif;
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(137,74,213,1) 35%, rgba(0,212,255,1) 100%);
+    }
+    div{
+        margin-top: 50px;
+        font-weight: 900;
+    }
+    
+</style>
+        <title>Result Page</title>
+    </head>
+    <body bgcolor="#7b8492">
+        <div><center>
+            <h1><b>PREDICTION:</b></h1>
+            {%if data == 0%}
+            <h1>Iris-setosa</h1>
+            <img src="/static/Irissetosa1.jpg" alt="Iris-setosa" width = "300">
+            {%elif data == 1%}
+            <h1>Iris-versicolor</h1>
+            <img src="/static/Irisversicolor.jpg" alt="Iris-Versicolor" width = "300">
+            {%else%}
+            <h1>Iris-virginica</h1>
+            <img src="/static/irisvirginica.jpeg" alt="Iris-Virginica" width = "300">
+            {%endif%}
+            <br><br>
+
+            <a href="/">Go back to home page</a>
+
+        </center>
+    </div>
+    </body>
+</html>
